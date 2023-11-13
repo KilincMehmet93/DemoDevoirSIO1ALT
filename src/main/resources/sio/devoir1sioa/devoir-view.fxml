@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../CSS/DevoirStyles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sio.devoir1sioa.DevoirController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="hbTitre" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="600.0" styleClass="lblTitre" text="Devoir n°1" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="300.0" prefWidth="135.0" spacing="20.0" styleClass="vbExos" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnExo1" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#btnExosMenuClicked" prefWidth="300.0" styleClass="btnExo" text="Exercice n°1">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Coeur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnExo2" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#btnExosMenuClicked" prefWidth="300.0" styleClass="btnExo" text="Exercice n°2">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Coeur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnExo3" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onMouseClicked="#btnExosMenuClicked" prefWidth="300.0" styleClass="btnExo" text="Exercice n°3">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/Coeur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="apExo1" prefHeight="300.0" prefWidth="464.0" style="-fx-background-color: #C7E8F4;" styleClass="apExos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="67.0" layoutY="54.0" text="Montant réel" AnchorPane.leftAnchor="67.0" />
+                  <Label layoutX="67.0" layoutY="100.0" text="Montant souhaité" AnchorPane.leftAnchor="67.0" />
+                  <TextField fx:id="txtMontantReel" alignment="CENTER" layoutX="246.0" layoutY="52.0" AnchorPane.rightAnchor="69.0" />
+                  <TextField fx:id="txtMontantSouhaite" alignment="CENTER" layoutX="246.0" layoutY="98.0" AnchorPane.rightAnchor="69.0" />
+                  <Button fx:id="btnCalculerCommission" layoutX="68.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#btnCalculerCommissionClicked" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: #C7E8F4; -fx-border-color: blue;" text="Calculer Commission" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="68.0" />
+                  <Spinner fx:id="spAnneesExperience" layoutX="247.0" layoutY="140.0" AnchorPane.rightAnchor="69.0" />
+                  <Label layoutX="67.0" layoutY="142.0" text="Nombre d'années d'expérience" AnchorPane.leftAnchor="67.0" />
+                  <Label fx:id="lblResultatExo1" layoutX="67.0" layoutY="186.0" prefHeight="42.0" prefWidth="329.0" style="-fx-border-color: blue;">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="apExo2" prefHeight="300.0" prefWidth="464.0" style="-fx-background-color: #C7E8F4;" styleClass="apExos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="47.0" layoutY="44.0" text="Taille du losange" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="328.33333333333337" />
+                  <Slider fx:id="sldLosange" blockIncrement="1.0" layoutX="186.0" layoutY="34.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="1" prefHeight="37.0" prefWidth="146.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" AnchorPane.leftAnchor="168.66666666666669" />
+                  <TextArea fx:id="txtLosange" layoutX="47.0" layoutY="86.0" prefHeight="200.0" prefWidth="367.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="47.0" />
+                  <Button fx:id="btnDessiner" layoutX="328.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#btnDessinerClicked" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #C7E8F4; -fx-border-color: blue;" text="Dessiner" AnchorPane.rightAnchor="46.666666666666686" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="apExo3" prefHeight="300.0" prefWidth="464.0" style="-fx-background-color: #C7E8F4;" styleClass="apExos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="76.0" layoutY="43.0" text="Population réelle" AnchorPane.leftAnchor="76.0" />
+                  <Label layoutX="76.0" layoutY="119.0" text="Taux de croissance" AnchorPane.leftAnchor="76.0" />
+                  <TextField fx:id="txtPopulationReelle" alignment="CENTER" layoutX="239.0" layoutY="39.0" AnchorPane.rightAnchor="76.0" />
+                  <TextField fx:id="txtTauxCroissance" alignment="CENTER" layoutX="239.0" layoutY="115.0" AnchorPane.rightAnchor="76.0" />
+                  <Label layoutX="76.0" layoutY="81.0" text="Population souhaitée" AnchorPane.leftAnchor="76.0" />
+                  <TextField fx:id="txtPopulationSouhaitee" alignment="CENTER" layoutX="239.0" layoutY="77.0" AnchorPane.rightAnchor="76.0" />
+                  <Label fx:id="lblResultatExo3" layoutX="76.0" layoutY="159.0" prefHeight="78.0" prefWidth="313.0" style="-fx-border-color: blue;" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="76.0">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="btnCalculerPopulation" layoutX="76.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#btnCalculerPopulationClicked" prefHeight="25.0" prefWidth="310.0" style="-fx-background-color: #C7E8F4; -fx-border-color: blue;" text="Calculer Population" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="76.0" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </center>
+</BorderPane>
